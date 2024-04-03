@@ -1,7 +1,7 @@
 <template>
   <div class="header w-full p-4 flex justify-between sticky top-0 backdrop-blur-sm">
     <div>
-      <p class="text-3xl font-bold mont">Льюіс Керрол</p>
+      <p class="text-3xl font-bold mont">Марк Твен</p>
     </div>
     <div class="justify-end w-1/3 flex">
       <div class="links flex flex-row justify-evenly">
@@ -20,8 +20,8 @@
   </div>
   <div class="footer">
     <div class="text-gray-800">
-      <p class="text-center text-sm">© 2024 Пуковський Микола</p>
-      <p class="text-center text-sm">Всі права захищені</p>
+      <p class="text-center text-sm">© 2024 Плейзор Олександр</p>
+      <p class="text-center text-sm">все сам робив :)</p>
     </div>
   </div>
 </template>

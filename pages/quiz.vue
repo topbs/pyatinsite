@@ -1,9 +1,9 @@
 <template>
     <UContainer>
         <div class="quest p-4" v-if="!testPassed">
-            <div class="buttons space-y-4 my-4 bg-gray-700 rounded-lg p-4" v-for="question in questions">
+            <div class="buttons space-y-4 my-4 bg-gray-700 rounded-lg p-4" v-for="(question, index) in questions">
                 <div>
-                    <p class="text-lg">{{ question.question }}</p>
+                    <p class="text-lg">№{{ index+1 }}. {{ question.question }}</p>
                 </div>
                 <div class="flex flex-col">
                     <UCheckbox v-for="answer in question.answers" v-model="answer.selected" :label="answer.answer" :key="answer.answer" />
@@ -35,125 +35,125 @@ onMounted(() => {
 })
 const questions = [
     {
-        question: "Які з цих творів належать Льюїсу Керролу?",
+        question: "Назвіть містечко, в якому жив Том Сойєр:",
         answers: [
             {
-                answer: "Аліса в країні чудес",
+                answer: "Нью-Йорк",
+                correct: false,
+                selected: false
+            },
+            {
+                answer: "Сент-Пітерсберг",
                 correct: true,
                 selected: false
             },
             {
-                answer: "Сон літньої ночі",
+                answer: "Лас-Вегас",
                 correct: false,
                 selected: false
             },
             {
-                answer: "Сонети",
-                correct: false,
-                selected: false
-            },
-            {
-                answer: "Віндзорські жартівниці",
+                answer: "Сан-Франциско",
                 correct: false,
                 selected: false
             }
         ]
     },
     {
-        question: "Коли народився Льюїс Керрол?",
+        question: "За що тітонька Поллі змусила Тома білити паркан та ще й у суботу?",
         answers: [
             {
-                answer: "27 лютого 1832 року",
+                answer: "За те, що їв варення без дозволу",
                 correct: false,
                 selected: false
             },
             {
-                answer: "1 лютого 1833 року",
+                answer: "За те, що побив Сіда",
                 correct: false,
                 selected: false
             },
             {
-                answer: "27 січня 1832 року",
-                correct: true,
-                selected: false
-            },
-            {
-                answer: "27 січня 1833 року",
-                correct: false,
-                selected: false
-            }
-        ]
-    },
-    {
-        question: "Де навчався Льюїс Керрол?",
-        answers: [
-            {
-                answer: "В Оксфорді",
-                correct: true,
-                selected: false
-            },
-            {
-                answer: "В Кембриджі",
+                answer: "За те, що таємно крав цукор",
                 correct: false,
                 selected: false
             },
             {
-                answer: "В Гарварді",
-                correct: false,
-                selected: false
-            },
-            {
-                answer: "В Єльському університеті",
-                correct: false,
-                selected: false
-            }
-        ]
-    },
-    {
-        question: "Де народився Льюїс Керрол?",
-        answers: [
-            {
-                answer: "В Лондоні",
-                correct: false,
-                selected: false
-            },
-            {
-                answer: "В Дубліні",
-                correct: false,
-                selected: false
-            },
-            {
-                answer: "В Ліверпулі",
-                correct: false,
-                selected: false
-            },
-            {
-                answer: "В Дерсбері",
+                answer: "За те, що не пішов до школи, а пішов купатися",
                 correct: true,
                 selected: false
             }
         ]
     },
     {
-        question: "Коли помер Льюїс Керрол?",
+        question: "На відміну від Тома, він \"був слухняний хлопець, ніколи не пустував і не завдавав прикрощів дорослим\". Хто він?",
         answers: [
             {
-                answer: "14 січня 1898 року",
+                answer: "Бен",
+                correct: false,
+                selected: false
+            },
+            {
+                answer: "Джо",
+                correct: false,
+                selected: false
+            },
+            {
+                answer: "Сід",
                 correct: true,
                 selected: false
             },
             {
-                answer: "14 лютого 1898 року",
+                answer: "Гек",
+                correct: false,
+                selected: false
+            }
+        ]
+    },
+    {
+        question: "Огризок яблука, паперовий змій, здохлий пацюк, 12 мармурових кульок, поламаний пищик, скельце від синьої пляшки, ключ, грудка крейди, два пуголовки … - це далеко не повний перелік \"скарбу\" Тома, який він отримав …",
+        answers: [
+            {
+                answer: "За дозвіл побілити його паркан",
+                correct: true,
+                selected: false
+            },
+            {
+                answer: "За перемогу в кулачному бою",
                 correct: false,
                 selected: false
             },
             {
-                answer: "27 січня 1898 року",
+                answer: "За вміння найкраще плювати крізь зуби",
                 correct: false,
                 selected: false
             },
             {
-                answer: "27 січня 1899 року",
+                answer: "За особливий спосіб свисту",
+                correct: false,
+                selected: false
+            }
+        ]
+    },
+    {
+        question: "Усі хлопчики містечка заздрили йому і намагались наслідувати, а матері в містечку ненавиділи його. Хто цей хлопчисько?",
+        answers: [
+            {
+                answer: "Альфред Темпль",
+                correct: false,
+                selected: false
+            },
+            {
+                answer: "Гекльберрі Фінн",
+                correct: true,
+                selected: false
+            },
+            {
+                answer: "Бен Роджерс",
+                correct: false,
+                selected: false
+            },
+            {
+                answer: "Джонні Міллер",
                 correct: false,
                 selected: false
             }
